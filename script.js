@@ -61,3 +61,99 @@ confirmrequest.addEventListener('click', ()=>{
   deleterequest.style.display = 'none';
   confirmrequest.innerHTML = "Confirmed";
 })
+const btnn=document.querySelector('.newbtn');
+const input=document.querySelector("textarea");
+const post=document.querySelector('.all_posts');
+function addPost(event){
+  const val=input.value;
+  let postHtml=
+  `            <div class="friends_post">
+
+  <div class="friend_post_top">
+
+      <div class="img_and_name">
+
+         
+
+          <div class="friends_name">
+              <p class="friends_name">
+                  Senuda De Silva
+              </p>
+              <p class="time">16h.<i class="fa-solid fa-user-group"></i></p>
+          </div>
+          
+
+      </div>
+
+      <div class="menu">
+
+          <i class="fa-solid fa-ellipsis"></i>
+
+      </div>
+
+  </div>
+<p>${val}</p>
+  
+
+  <div class="info">
+
+      <div class="emoji_img">
+          <img src="image/like.png">
+          <img src="image/haha.png">
+          <img src="image/heart.png">
+          <p>You, Pusspinder Thakur and 25K others</p>
+      </div>
+
+      <div class="comment">
+          <p>421 Comments</p>
+          <p>1.3K Shares</p>
+      </div>
+
+  </div>
+
+  <hr>
+
+  <div class="like">
+
+      <div class="like_icon">
+          <i class="fa-solid fa-thumbs-up like1"></i>
+          <p>Like</p>
+      </div>
+
+      <div class="like_icon">
+          <i class="fa-solid fa-message"></i>
+          <p>Comments</p>
+      </div>
+
+      <div class="like_icon">
+          <i class="fa-solid fa-share"></i>
+          <p>Share</p>
+      </div>
+
+  </div>
+
+  <hr>
+
+  <div class="comment_warpper">
+
+      <img src="image/profile.png">
+      <div class="circle"></div>
+
+      <div class="comment_search">
+
+          <input type="text" placeholder="Write a comment">
+          <i class="fa-regular fa-face-smile"></i>
+          <i class="fa-solid fa-camera"></i>
+          <i class="fa-regular fa-note-sticky"></i>
+
+      </div>
+
+  </div>
+
+</div>`
+  post.innerHTML+=postHtml
+}
+btnn.addEventListener("click",addPost)
+btnn.addEventListener("click",function(){
+  input.value="";
+})

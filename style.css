@@ -850,7 +850,8 @@ body{
 
 .container{
     height: 470px;
-    width:630px;
+    width:550px;
+    margin-left: 100px;
     background:#fff;
     border-radius:10px;
     transition: height 0.2s ease;
@@ -866,12 +867,12 @@ body{
 
 }
 .container  section{
-    width: 1000px;
+    width: 1200px;
     background: #fff;
 }
 .container .post{
     transition: margin-left 0.18s ease;
-    margin-left: 80px;
+    margin-left: 20px;
 }
 
 .container.active .post{
